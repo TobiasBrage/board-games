@@ -1,0 +1,70 @@
+* {
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    margin:0;
+    padding:0;
+}
+
+body {
+    background-color:#eeeeee;
+}
+
+main {
+    width:606px;
+    margin:auto;
+}
+
+#wrapper {
+    width:606px;
+    min-height:100px;
+    float:left;
+    margin:100px 0 0 0;
+}
+
+h1 {
+    width:606px;
+    float:left;
+    color:#999999;
+    font-size:25px;
+    text-align:center;
+    margin:0 0 20px 0;
+}
+
+#tictactoeUsername {
+    float:left;
+    width:404px;
+    color:#555555;
+    border:1px solid #dddddd;
+    border-radius:3px;
+    padding:10px 0 10px 10px;
+    font-size:16px;
+    margin:0 20px 0 0;
+    outline:0;
+}
+
+#tictactoeSubmit {
+    width:168px;
+    background-color:#69B984;
+    color:#fff;
+    border:1px solid #4ba369;
+    border-radius:3px;
+    padding:10px 0 10px 0;
+    font-size:16px;
+    cursor: pointer;
+    float:left;
+}
+
+#opponentLoading {
+    width:50px;
+    float:left;
+    margin:0 0 0 278px;
+}
+
+#ownUsername {
+    width:606px;
+    float:left;
+    text-align:center;
+    color:#999999;
+    font-size:16px;
+    margin:20px 0 0 0;
+}
