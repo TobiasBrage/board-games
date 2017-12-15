@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
     var userCookieId = readCookie('curUserId');
+    var username = '';
     var apiAddress = '165.227.173.142';
 
     if(userCookieId) {
@@ -28,9 +29,7 @@ $(document).ready(function(){
         });
     }
 
-    var username = '';
-
-    document.querySelector('#tictactoeSubmit').addEventListener('click', (event) => {
+    function searchOpponent() {
         username = $('#tictactoeUsername').val();
         let usernameLength = $('#tictactoeUsername').val().length;
 
@@ -53,7 +52,7 @@ $(document).ready(function(){
                     let usernameLength = $('#tictactoeUsername').val().length;
                     if(data.message == 'userCreated') {
                         createCookie('curUserId',data.userId,2);
-                        window.location.href = 'searchOpponent.html';
+                        window.location.href = 'search/';
                     } else if(data.message == "userError") {
                         alert('Brugernavnet er allerede i brug.');
                     }
@@ -61,6 +60,10 @@ $(document).ready(function(){
         } else {
             alert('Brugernavnet er for kort.');
         }
+    }
+
+    document.querySelector('#tictactoeSubmit').addEventListener('click', (event) => {
+        searchOpponent();
     });
 
     function createCookie(cookieName, cookieValue, expireInDays) {
@@ -80,5 +83,12 @@ $(document).ready(function(){
         }
         return null;
     }
+
+    $('#tictactoeUsername').on('keydown', function(e) {
+        if (e.which == 13) {
+            e.preventDefault();
+            searchOpponent();
+        }
+    });
 
 });

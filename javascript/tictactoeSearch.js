@@ -5,7 +5,7 @@ $(document).ready(function(){
     var apiAddress = '165.227.173.142';
 
     if(userId == null) {
-        window.location.href = '../tictactoe';
+        window.location.href = '../';
     } else {
         fetch('http://'+apiAddress+':1337/user/id='+userId)
         .then((response) => {
@@ -14,7 +14,7 @@ $(document).ready(function(){
         .then((data) => {
             console.log(data);
             if(data == 0) {
-                window.location.href = '../tictactoe';
+                window.location.href = '../';
             } else {
                 var username = data[0].username;
                 $('#ownUsername').html('Du spiller som: '+username);
@@ -54,7 +54,7 @@ $(document).ready(function(){
                                     })
                                     .then((data) => { 
                                         if(data.message == 'gameCreated') {
-                                            window.location.href = '../tictactoe/game.html';
+                                            window.location.href = '../game';
                                         }
                                 });
                             }
@@ -62,7 +62,7 @@ $(document).ready(function(){
                             gameSearch = 0;
                         });
                     } else {
-                        window.location.href = '../tictactoe/game.html';
+                        window.location.href = '../game';
                     }
                 });
             }

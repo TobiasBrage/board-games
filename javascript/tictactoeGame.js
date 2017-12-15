@@ -20,7 +20,7 @@ $(document).ready(function(){
         .then((data) => {
             console.log(data);
             if(data == 0) {
-                window.location.href = '../tictactoe';
+                window.location.href = '../';
             }
             if(data[0].playing) {
                 username = data[0].username;
@@ -77,11 +77,11 @@ $(document).ready(function(){
                         });
                 });
             } else {
-                window.location.href = '../tictactoe';
+                window.location.href = '../';
             }
         });
     } else {
-        window.location.href = '../tictactoe';
+        window.location.href = '../';
     }
 
     setInterval(function() {
@@ -139,7 +139,7 @@ $(document).ready(function(){
             })
             .then((data) => {
                 alert('Din modstander forlod spillet.');
-                window.location.href = '../tictactoe';
+                window.location.href = '../';
             });
         });
     }

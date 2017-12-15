@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="../stylesheet/tictactoe.css" rel="stylesheet">
-    <script src="../javascript/jquery.min.js"></script>
-    <script src="../javascript/tictactoeUsername.js"></script>
+    <link href="stylesheet/tictactoe.css" rel="stylesheet">
     <title>Tic Tac Toe - Username</title>
 </head>
 <body>
@@ -15,7 +13,7 @@
     <div id="wrapper">
         <div id="usernameContainer">
             <h1>Vælg et brugernavn</h1>
-            <input type="text" id="tictactoeUsername" name="tictactoeUsername" placeholder="brugernavn" autocomplete="none">
+            <input type="text" id="tictactoeUsername" name="tictactoeUsername" placeholder="brugernavn" autocomplete="none" onkeypress="searchOpponent();">
             <input type="button" id="tictactoeSubmit" name="tictactoeSubmit" value="Find en modstander">
         </div>
         <div id="test">
@@ -24,5 +22,7 @@
     </div>
 </main>
 
+<script src="javascript/jquery.min.js"></script>
+<script src="javascript/tictactoeUsername.js"></script>
 </body>
 </html>
