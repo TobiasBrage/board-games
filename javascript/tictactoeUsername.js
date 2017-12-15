@@ -1,20 +1,21 @@
 $(document).ready(function(){
 
     var userCookieId = readCookie('curUserId');
+    var apiAddress = '165.227.173.142';
 
     if(userCookieId) {
-        fetch('http://165.227.173.142:1337/user/id='+userCookieId)
+        fetch('http://'+apiAddress+':1337/user/id='+userCookieId)
         .then((response) => {
             return response.json();
         })
         .then((data) => {
             if(data != 0) {
-                fetch('http://165.227.173.142:1337/board/delete/id='+data[0].gameId)
+                fetch('http://'+apiAddress+':1337/board/delete/id='+data[0].gameId)
                 .then((response) => {
                     return response.json();
                 })
                 .then((data) => {
-                    fetch('http://165.227.173.142:1337/user/delete/id='+userCookieId)
+                    fetch('http://'+apiAddress+':1337/user/delete/id='+userCookieId)
                     .then((response) => {
                         return response.json();
                     })
@@ -43,7 +44,7 @@ $(document).ready(function(){
                 cache: 'no-cache',
                 mode: 'cors'
             };
-            let request = new Request('http://165.227.173.142:1337/add/user', init);
+            let request = new Request('http://'+apiAddress+':1337/add/user', init);
             fetch(request)
                 .then(response => {
                     return response.json();

@@ -10,9 +10,10 @@ $(document).ready(function(){
     var opponentSymbol = '';
     var username = '';
     var opponentUsername = '';
+    var apiAddress = '165.227.173.142';
     
     if(userId) {
-        fetch('http://165.227.173.142:1337/user/id='+userId)
+        fetch('http://'+apiAddress+':1337/user/id='+userId)
         .then((response) => {
             return response.json();
         })
@@ -33,7 +34,7 @@ $(document).ready(function(){
                     cache: 'no-cache',
                     mode: 'cors'
                 };
-                let request = new Request('http://165.227.173.142:1337/board/opponent', init);
+                let request = new Request('http://'+apiAddress+':1337/board/opponent', init);
                 fetch(request)
                     .then(response => {
                         return response.json();
@@ -49,7 +50,7 @@ $(document).ready(function(){
                         } else {
                             userSymbol = 'cross';
                         }
-                        fetch('http://165.227.173.142:1337/user/id='+opponentId)
+                        fetch('http://'+apiAddress+':1337/user/id='+opponentId)
                         .then((response) => {
                             return response.json();
                         })
@@ -58,7 +59,7 @@ $(document).ready(function(){
                                 leaveBoard();
                             } else {
                                 opponentUsername = data[0].username;
-                                fetch('http://165.227.173.142:1337/board/lastturn/id='+gameId) //xxx
+                                fetch('http://'+apiAddress+':1337/board/lastturn/id='+gameId) //xxx
                                 .then((response) => {
                                     return response.json();
                                 })
@@ -127,12 +128,12 @@ $(document).ready(function(){
     }
 
     function leaveBoard() {
-        fetch('http://165.227.173.142:1337/user/id='+userId)
+        fetch('http://'+apiAddress+':1337/user/id='+userId)
         .then((response) => {
             return response.json();
         })
         .then((data) => {
-            fetch('http://165.227.173.142:1337/board/delete/id='+data[0].gameId)
+            fetch('http://'+apiAddress+':1337/board/delete/id='+data[0].gameId)
             .then((response) => {
                 return response.json();
             })

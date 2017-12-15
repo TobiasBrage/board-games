@@ -2,11 +2,12 @@ $(document).ready(function(){
     
     var userId = readCookie('curUserId');
     var gameSearch = 0;
+    var apiAddress = '165.227.173.142';
 
     if(userId == null) {
         window.location.href = '../tictactoe';
     } else {
-        fetch('http://165.227.173.142:1337/user/id='+userId)
+        fetch('http://'+apiAddress+':1337/user/id='+userId)
         .then((response) => {
             return response.json();
         })
@@ -23,14 +24,14 @@ $(document).ready(function(){
         setInterval(function() {
             if(gameSearch == 0) {
                 gameSearch = 1;
-                fetch('http://165.227.173.142:1337/user/id='+userId)
+                fetch('http://'+apiAddress+':1337/user/id='+userId)
                 .then((response) => {
                     return response.json();
                 })
                 .then((data) => {
                     var userPlaying = data[0].playing;
                     if(userPlaying == 'no') {
-                        fetch('http://165.227.173.142:1337/user/opponent/id='+userId)
+                        fetch('http://'+apiAddress+':1337/user/opponent/id='+userId)
                         .then((response) => {
                             return response.json();
                         })
@@ -46,7 +47,7 @@ $(document).ready(function(){
                                     cache: 'no-cache',
                                     mode: 'cors'
                                 };
-                                let request = new Request('http://165.227.173.142:1337/game/create/', init);
+                                let request = new Request('http://'+apiAddress+':1337/game/create/', init);
                                 fetch(request)
                                     .then(response => {
                                         return response.json();
