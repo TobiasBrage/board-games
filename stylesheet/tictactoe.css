@@ -1,0 +1,198 @@
+* {
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    margin:0;
+    padding:0;
+}
+
+body {
+    background-color:#eeeeee;
+}
+
+main {
+    width:604px;
+    margin:auto;
+}
+
+#wrapper {
+    width:604px;
+    min-height:100px;
+    float:left;
+    margin:100px 0 0 0;
+}
+
+h1 {
+    width:604px;
+    float:left;
+    color:#999999;
+    font-size:25px;
+    text-align:center;
+    margin:0 0 20px 0;
+}
+
+#tictactoeUsername {
+    float:left;
+    width:404px;
+    color:#555555;
+    border:1px solid #dddddd;
+    border-radius:3px;
+    padding:10px 0 10px 10px;
+    font-size:16px;
+    margin:0 20px 0 0;
+    outline:0;
+}
+
+#tictactoeSubmit {
+    width:168px;
+    background-color:#69B984;
+    color:#fff;
+    border:1px solid #4ba369;
+    border-radius:3px;
+    padding:10px 0 10px 0;
+    font-size:16px;
+    cursor: pointer;
+    float:left;
+}
+
+#opponentLoading {
+    width:50px;
+    float:left;
+    margin:0 0 0 278px;
+}
+
+#ownUsername {
+    width:604px;
+    float:left;
+    text-align:center;
+    color:#999999;
+    font-size:16px;
+    margin:20px 0 0 0;
+}
+
+#gameBoard {
+    width:604px;
+    height:604px;
+    float:left;
+    background-color:#ffffff;
+    margin:0 0 20px 0;
+    list-style: none;
+}
+
+#boardPuzzleA1 {
+    float:left;
+    height:200px;
+    width:200px;
+    border:1px solid #dddddd;
+    cursor:pointer;
+}
+
+#boardPuzzleA2 {
+    float:left;
+    height:200px;
+    width:200px;
+    border-top:1px solid #dddddd;
+    border-bottom:1px solid #dddddd;
+    cursor:pointer;
+}
+
+#boardPuzzleA3 {
+    float:left;
+    height:200px;
+    width:200px;
+    border:1px solid #dddddd;
+    cursor:pointer;
+}
+
+#boardPuzzleB1 {
+    float:left;
+    height:200px;
+    width:200px;
+    border-left:1px solid #dddddd;
+    border-right:1px solid #dddddd;
+    cursor:pointer;
+}
+
+#boardPuzzleB2 {
+    float:left;
+    height:200px;
+    width:200px;
+    cursor:pointer;
+}
+
+#boardPuzzleB3 {
+    float:left;
+    height:200px;
+    width:200px;
+    border-left:1px solid #dddddd;
+    border-right:1px solid #dddddd;
+    cursor:pointer;
+}
+
+#boardPuzzleC1 {
+    float:left;
+    height:200px;
+    width:200px;
+    border:1px solid #dddddd;
+    cursor:pointer;
+}
+
+#boardPuzzleC2 {
+    float:left;
+    height:200px;
+    width:200px;
+    border-top:1px solid #dddddd;
+    border-bottom:1px solid #dddddd;
+    cursor:pointer;
+}
+
+#boardPuzzleC3 {
+    float:left;
+    height:200px;
+    width:200px;
+    border:1px solid #dddddd;
+    cursor:pointer;
+}
+
+#boardTitle {
+    width:604px;
+    float:left;
+    color:#555555;
+    font-size:25px;
+    text-align:center;
+    margin:0 0 10px 0;
+}
+
+#boardOpponentName {
+    width:604px;
+    float:left;
+    text-align:center;
+    color:#999999;
+    font-size:16px;
+    margin:0 0 20px 0;
+}
+
+#returnHomeBtn {
+    width:370px;
+    float:left;
+    background-color:#69B984;
+    color:#fff;
+    border:1px solid #4ba369;
+    border-radius:3px;
+    padding:10px 0 10px 0;
+    margin:0 0 20px 0;
+    font-size:18px;
+    cursor:pointer;
+}
+
+#exitBtn {
+    width:214px;
+    float:left;
+    background-color:#B6462F;
+    color:#fff;
+    border:1px solid #a9331b;
+    border-radius:3px;
+    padding:10px 0 10px 0;
+    margin:0 0 20px 20px;
+    font-size:18px;
+    cursor:pointer;
+}

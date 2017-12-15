@@ -4,9 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link href="../stylesheet/tictactoe.css" rel="stylesheet">
+    <title>Tic Tac Toe</title>
 </head>
 <body>
-    Actual game
+    
+<main>
+    <div id="wrapper">
+        <h1 id="boardTitle">Det er din tur</h1>
+        <p id="boardOpponentName">opponent..</p>
+        <ul id="gameBoard">
+            <li id="boardPuzzleA1"></li>
+            <li id="boardPuzzleA2"></li>
+            <li id="boardPuzzleA3"></li>
+            <li id="boardPuzzleB1"></li>
+            <li id="boardPuzzleB2"></li>
+            <li id="boardPuzzleB3"></li>
+            <li id="boardPuzzleC1"></li>
+            <li id="boardPuzzleC2"></li>
+            <li id="boardPuzzleC3"></li>
+        </ul>
+        <input type="button" id="returnHomeBtn" value="Tilbage til startskærmen">
+        <input type="button" id="exitBtn" value="Afslut">
+    </div>
+</main>
+
+<script src="../javascript/jquery.min.js"></script>
+<script src="../javascript/tictactoeGame.js"></script>
 </body>
 </html>

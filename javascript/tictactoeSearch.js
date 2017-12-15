@@ -6,26 +6,31 @@ $(document).ready(function(){
     if(userId == null) {
         window.location.href = '../tictactoe';
     } else {
-        fetch('http://localhost:1337/user/id='+userId)
+        fetch('http://165.227.173.142:1337/user/id='+userId)
         .then((response) => {
             return response.json();
         })
         .then((data) => {
-            var username = data[0].username;
-            $('#ownUsername').html('Du spiller som: '+username);
+            console.log(data);
+            if(data == 0) {
+                window.location.href = '../tictactoe';
+            } else {
+                var username = data[0].username;
+                $('#ownUsername').html('Du spiller som: '+username);
+            }
         });
     
         setInterval(function() {
             if(gameSearch == 0) {
                 gameSearch = 1;
-                fetch('http://localhost:1337/user/id='+userId)
+                fetch('http://165.227.173.142:1337/user/id='+userId)
                 .then((response) => {
                     return response.json();
                 })
                 .then((data) => {
                     var userPlaying = data[0].playing;
                     if(userPlaying == 'no') {
-                        fetch('http://localhost:1337/user/opponent/id='+userId)
+                        fetch('http://165.227.173.142:1337/user/opponent/id='+userId)
                         .then((response) => {
                             return response.json();
                         })
@@ -41,7 +46,7 @@ $(document).ready(function(){
                                     cache: 'no-cache',
                                     mode: 'cors'
                                 };
-                                let request = new Request('http://localhost:1337/game/create/', init);
+                                let request = new Request('http://165.227.173.142:1337/game/create/', init);
                                 fetch(request)
                                     .then(response => {
                                         return response.json();
